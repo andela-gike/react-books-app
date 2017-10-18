@@ -17,3 +17,4 @@ class App extends React.Component {
    }
 }
 ```
+Redux is used to store state until it is changed
