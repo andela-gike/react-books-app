@@ -18,3 +18,6 @@ class App extends React.Component {
 }
 ```
 Redux is used to store state until it is changed
+# Redux connect function parameter
+ - MapStateToProps is a parameter passed into the connect function to allows us to pass some data from redux state into a component.
+ - MapDispatchToProps is a parameter passed into the connect function that allows us to wrap our functions in dispatch, it is put in an object
