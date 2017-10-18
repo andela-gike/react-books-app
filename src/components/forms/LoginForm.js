@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button } from 'semantic-ui-react';
 import Validator from 'validator';
+import _ from 'lodash';
 import InlineError from '../messages/InlineError';
 
 class LoginForm extends React.Component {
@@ -21,9 +22,12 @@ class LoginForm extends React.Component {
   onSubmit = () => {
     const errors = this.validate(this.state.data);
     this.setState({ errors });
-    if (Object.keys(errors).length === 0) {
+    if (_.isEmpty(errors)) {
       this.props.submit(this.state.data);
-    }
+    };
+    // if (Object.keys(errors).length === 0) {
+    //   this.props.submit(this.state.data);
+    // }
   };
 
   validate = (data) => {
